@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LIST STUDENTS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/Exercise_1/js/list_students.js"></script>
+    <script type="module" src="/Exercise_1/js/list_students.js"></script>
   </head>
   <body class="bg-gray-100 py-6 px-8">
     <h2 class="text-3xl font-semibold text-center mb-6">LIST STUDENTS</h2>
 
-    <!-- Add Student Button -->
-    <div class="flex justify-end mb-4">
+    <div class="flex justify-between mb-4">
+      <button
+        id="logoutBtn"
+        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Logout
+      </button>
       <button
         id="addStudentBtn"
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"

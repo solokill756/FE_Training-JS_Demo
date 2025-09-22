@@ -1,4 +1,7 @@
+import { checkLogin } from '../../exercise_2/js/login.js';
 document.addEventListener('DOMContentLoaded', function () {
+  checkLogin();
+
   const birthdayInput = document.getElementById('birthday');
   const phoneInput = document.getElementById('phoneNumber');
   const idInput = document.getElementById('id');

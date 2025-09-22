@@ -3,15 +3,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 function appendToDisplay(value) {
   if (display.value.length < 15) {
+    if (
+      /[0-9]/.test(value) === false &&
+      /[0-9]/.test(display.value.slice(-1)) === false
+    ) {
+      return;
+    }
+
     if (value === 'exp') {
       display.value += '^';
       return;
     }
 
-    if (value === '.' && display.value === '') {
-      display.value += '0.';
+    if (value === '.') {
+      if (display.value.includes('.')) return;
+
+      if (
+        display.value === '' ||
+        /[0-9]/.test(display.value.slice(-1)) === false
+      ) {
+        display.value += '0.';
+      } else {
+        display.value += '.';
+      }
       return;
     }
+
     display.value += value;
   }
 }
@@ -85,6 +102,9 @@ function calculatePercentage() {
 
 function percentage() {
   try {
+    if (/[0-9]/.test(display.value.slice(-1)) === false) {
+      return;
+    }
     calculateResult();
     display.value = `${parseFloat(display.value) * 100}%`;
   } catch (error) {

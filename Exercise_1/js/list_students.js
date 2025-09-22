@@ -1,9 +1,14 @@
+import { checkLogin } from '../../exercise_2/js/login.js';
+import { logout } from '../../exercise_2/js/logout.js';
 document.addEventListener('DOMContentLoaded', function () {
+  checkLogin();
+
   const tableBody = document.querySelector('#studentTable tbody');
   const addStudentBtn = document.getElementById('addStudentBtn');
   let storedStudents = localStorage.getItem('list_student');
-  storedStudents = storedStudents ? JSON.parse(storedStudents) : [];
+  const logoutBtn = document.getElementById('logoutBtn');
 
+  storedStudents = storedStudents ? JSON.parse(storedStudents) : [];
   storedStudents.forEach(function (student) {
     const row = document.createElement('tr');
     const formattedBirthday = new Date(student.birthday).toLocaleDateString(
@@ -17,9 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
     tableBody.appendChild(row);
   });
-  console.log(`addStudentBtn : ${addStudentBtn}`);
+
   addStudentBtn.addEventListener('click', function (event) {
     event.preventDefault();
     window.location.href = 'add_student_form.html';
+  });
+  logoutBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    logout();
   });
 });

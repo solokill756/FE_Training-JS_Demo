@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Add Students</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/Exercise_1/js/add_student_form.js"></script>
+  </head>
+  <body class="bg-gray-100 p-8">
+    <h2 class="text-3xl font-semibold text-center mb-6">Form Add Students</h2>
+
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+      <form id="studentForm">
+        <!-- ID Field -->
+        <div class="mb-4">
+          <label for="id" class="block text-sm font-medium text-gray-700"
+            >ID</label
+          >
+          <input
+            type="text"
+            id="id"
+            name="id"
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+            required
+          />
+        </div>
+
+        <!-- Name Field -->
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+            required
+            minlength="5"
+            maxlength="15"
+          />
+        </div>
+
+        <!-- Birthday Field -->
+        <div class="mb-4">
+          <label for="birthday" class="block text-sm font-medium text-gray-700"
+            >Birthday</label
+          >
+          <input
+            type="date"
+            id="birthday"
+            name="birthday"
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+            required
+          />
+        </div>
+
+        <!-- Phone Number Field -->
+        <div class="mb-4">
+          <label
+            for="phoneNumber"
+            class="block text-sm font-medium text-gray-700"
+            >Phone Number</label
+          >
+          <input
+            type="number"
+            id="phoneNumber"
+            name="phoneNumber"
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
+            required
+            min="0"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mb-4 text-center">
+          <button
+            type="submit"
+            class="px-6 py-2 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

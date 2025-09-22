@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIST STUDENTS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/Exercise_1/js/list_students.js"></script>
+  </head>
+  <body class="bg-gray-100 py-6 px-8">
+    <h2 class="text-3xl font-semibold text-center mb-6">LIST STUDENTS</h2>
+
+    <!-- Add Student Button -->
+    <div class="flex justify-end mb-4">
+      <button
+        id="addStudentBtn"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Add Student
+      </button>
+    </div>
+
+    <section class="overflow-x-auto">
+      <table
+        id="studentTable"
+        class="min-w-full table-auto bg-white shadow-md rounded-lg"
+      >
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-4 py-2 text-left">ID</th>
+            <th class="px-4 py-2 text-left">NAME</th>
+            <th class="px-4 py-2 text-left">BIRTHDAY</th>
+            <th class="px-4 py-2 text-left">PHONE NUMBER</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </body>
+</html>
